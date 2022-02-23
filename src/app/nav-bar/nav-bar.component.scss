@@ -1,123 +1,137 @@
-@import '../../assets/styles/variable';
-
-.navigation-bar{
-  background-color: #FFF !important;
-  color: $main-color;
-  border-bottom: 3px solid $main-color;
-}
-
-.fixed-top{
-  z-index: 2000 !important;
-}
-
-.navbar-brand{
-  color: $main-color !important;
-  padding: unset;
-  font-size: 1rem;
+* {
+  box-sizing: border-box;
   margin: 0;
+  padding: 0;
 }
-
-.container-fluid{
-  justify-content: start;
-}
-.navbar-brand::after{
-  content: "";
-  color: $main-color;
-  padding-left: 5px;
-  border-right: 2px solid $main-color;
-}
-#dropdownMenuButton{
-  min-width: 290px;
-}
-
-.collapse.navbar-collapse{
-  justify-content: end;;
-}
-
-.btn-finish{
-  margin:0 10px;
-}
-
-.navigate-page{
+.nav-container {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding-top: 40px;
+  margin-bottom: 20px;
+  background:  #0d1117;
 }
-
-#progressbar {
-  margin-bottom: 30px;
-  overflow: hidden;
-  color: lightgrey
-}
-
-#progressbar .active {
-  color: #673AB7
-}
-
-#progressbar li {
-  list-style-type: none;
-  font-size: 15px;
-  width: 25%;
-  float: left;
+.navigation {
   position: relative;
-  font-weight: 400
+  width: 100%;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px 10px 0 0;
+}
+.navigation ul {
+  display: flex;
+  width: 400px;
+}
+.navigation ul li {
+  list-style: none;
+  position: relative;
+  width: 80px;
+  height: 60px;
+  z-index: 2;
 }
 
-#progressbar li:before {
-  width: 50px;
-  height: 50px;
-  line-height: 45px;
+.navigation ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  background: #fff;
+}
+
+.navigation ul li a .icon {
+  position: relative;
   display: block;
-  font-size: 20px;
-  color: #ffffff;
-  background: lightgray;
-  border-radius: 50%;
-  margin: 0 auto 10px auto;
-  padding: 2px
+  line-height: 65px;
+  font-size: 2em;
+  transition: 0.5s;
+  color: #222327;
+  opacity: 0;
 }
-
-#progressbar li:after {
-  content: '';
-  width: 100%;
-  height: 2px;
-  background: lightgray;
+.navigation ul li.active a .icon {
+  transform: translateY(-32px);
+  color: #2196f3;
+  opacity: 1;
+}
+.navigation ul li a .text {
   position: absolute;
-  left: 0;
-  top: 25px;
-  z-index: -1
-}
-
-#progressbar li.active:before,
-#progressbar li.active:after {
-  background: #673AB7
-}
-
-.progress {
-  height: 20px
-}
-
-.progress-bar {
-  background-color: #673AB7
-}
-.select-part{
-  margin: 0 20px;
-}
-.fit-image {
-  width: 100%;
-  object-fit: cover
-}
-.back-button,.next-button{
+  background: #2196f3;
+  color: #fff;
+  font-weight: 400;
+  font-size: 0.75em;
+  padding: 2px 7px;
+  border-radius: 12px;
+  transition: 0.5s;
+  transform: translateY(15px);
+  opacity: 0.5;
+  width: 75px;
   cursor: pointer;
 }
-.im::before{
-  vertical-align: middle;
+.navigation ul li.active a .text {
+  transform: translateY(-4px);
+  opacity: 1;
 }
-.im{
-  font-size: 20px;
+.indicator {
+  opacity: 0;
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  top: -40px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1;
+  transition: 0.5s;
+  transform: translateY(40px);
+}
+.indicator::before{
+  content: '';
+  position: absolute;
+  left: -28px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: 14px 18px rgb(255, 255, 255);
+  top: 10px;
+}
+.indicator::after{
+  content: '';
+  position: absolute;
+  right: -28px;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border-radius: 50%;
+  box-shadow: -14px 18px rgb(255, 255, 255);
+  top: 10px;
 }
 
-.im:hover{
-  opacity: 0.8;
+.navigation ul li:nth-child(1).active ~ .indicator{
+  opacity: 1;
+  transform: translateX(calc(80px * 0));
 }
-#dropdownMenuButton{
-  margin: 0 5px;
+.navigation ul li:nth-child(2).active ~ .indicator{
+  opacity: 1;
+  transform: translateX(calc(80px * 1));
+}
+.navigation ul li:nth-child(3).active ~ .indicator{
+  opacity: 1;
+  transform: translateX(calc(80px * 2));
+}
+.navigation ul li:nth-child(4).active ~ .indicator{
+  opacity: 1;
+  transform: translateX(calc(80px * 3));
+}
+.navigation ul li:nth-child(5).active ~ .indicator{
+  opacity: 1;
+  transform: translateX(calc(80px * 4));
+}
+.nav-link {
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
 }

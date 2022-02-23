@@ -1,23 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { IntroComponent } from './intro/intro.component';
-import { PartIntroComponent } from './part-menu/part-intro/part-intro.component';
-import { ExamComponent } from "./exam-index/exam-index.component";
-import { SheetComponent } from './sheet/sheet.component';
-import { RefreshComponentComponent } from './refresh-component/refresh-component.component';
-import { ToeicResultComponent } from './toeic-result/toeic-result.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { ProjectComponent } from './project/project.component';
+import { SkillComponent } from './skill/skill.component';
 
 const routes: Routes = [
-  {path:'',component:ExamComponent},
-  {path:'intro',component:IntroComponent},
-  {path:'refreshComponent', component:RefreshComponentComponent},
-  {path:'result', component:ToeicResultComponent},
-  // {path:'part-intro/:part',component:PartIntroComponent,
-  // children: [
-  //   { path: 'sheet', component: SheetComponent }
-  // ]}
-  { path: 'sheet', component: SheetComponent },
-  {path:'*',component:ExamComponent},
+  {path:"about" , component:AboutComponent},
+  {path:"contact" , component:ContactComponent},
+  {path:"experience" , component:ExperienceComponent},
+  {path:"project" , component:ProjectComponent},
+  {path:"skill" , component:SkillComponent},
+
+  {path:"**",component:AboutComponent,pathMatch:"full"},
 ];
 
 @NgModule({

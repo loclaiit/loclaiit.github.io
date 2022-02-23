@@ -1,5 +1,27 @@
-<app-nav-bar></app-nav-bar>
-<div class="main-container">
-  <router-outlet></router-outlet>
+<div class="row vh-100 align-items-center">
+  <div class="col"></div>
+  <div class="col-md-2">
+    <div class="col-profile">
+      <div class="card">
+        <div class="card-body align-self-center">
+          <app-profile></app-profile>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="card col-content">
+      <app-nav-bar></app-nav-bar>
+      <div class="content">
+        <hr>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+  <div class="col"></div>
 </div>
-<!-- <app-toeic-result></app-toeic-result> -->
+<!-- <div class="d-flex justify-content-center mb-10">
+  <a class="bg-light text-black lead" href="https://github.com/AbdullahOztuurkk/DevPortfolio" target="blank" style="text-decoration: none; padding:1px; font-size: 11px; border: 1px solid black; border-radius: 2px;">
+    <i class="fa fa-github" aria-hidden="true"></i>Fork us on Github
+  </a>
+</div> -->
