@@ -7,7 +7,6 @@ import { Configuration, SocialMedia } from '../configuration';
   styleUrls: ['./profile.component.scss']
 })
 export class ProfileComponent implements OnInit {
-
   _profileUrl:string;
   _userName:string;
   _userJob:string;
@@ -36,5 +35,31 @@ export class ProfileComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.runScript();
+  }
+
+  runScript(){
+    const $ = document.querySelector.bind(document);
+    var audio= document.getElementById("audio-icon");
+    audio.addEventListener("click",function(){
+      const player = $("#audio-player") ;//document.getElementById("audio-player");
+      console.log(player);
+      if(player != null){
+        if(player.currentTime == 0 || player.ended)
+        {
+          player.currentTime = 0
+          player.play();
+          audio.classList.add("playing");
+        }
+        else if(player.paused){
+          player.play();
+          audio.classList.add("playing");
+        }
+        else if(player.currentTime > 0){
+          player.pause();
+          audio.classList.remove("playing");
+        }
+      }
+    });
   }
 }
