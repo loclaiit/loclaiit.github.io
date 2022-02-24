@@ -1,35 +1,41 @@
 <div class="nav-container">
   <div class="navigation">
+    <div class="left-corner"></div>
     <ul>
-      <li [routerLink]="[ '/about']" routerLinkActive="active"><a>
+      <li [routerLink]="['/about']" routerLinkActive="active" #about="routerLinkActive">
+        <a>
           <span class="icon">
             <ion-icon name="person-outline"></ion-icon>
           </span>
           <span class="text">About</span>
         </a>
       </li>
-      <li [routerLink]="[ '/experience']" routerLinkActive="active"><a>
+      <li [routerLink]="['/experience']" routerLinkActive="active" #exp="routerLinkActive">
+        <a>
           <span class="icon">
             <ion-icon name="sparkles-outline"></ion-icon>
           </span>
           <span class="text">Experience</span>
         </a>
       </li>
-      <li [routerLink]="[ '/project']" routerLinkActive="active"><a>
+      <li [routerLink]="['/project']" routerLinkActive="active" #pro="routerLinkActive">
+        <a>
           <span class="icon">
             <ion-icon name="logo-codepen"></ion-icon>
           </span>
           <span class="text">Project</span>
         </a>
       </li>
-      <li [routerLink]="[ '/skill']" routerLinkActive="active"><a>
+      <li [routerLink]="['/skill']" routerLinkActive="active" #skill="routerLinkActive">
+        <a>
           <span class="icon">
             <ion-icon name="logo-codepen"></ion-icon>
           </span>
           <span class="text">Skill</span>
         </a>
       </li>
-      <li [routerLink]="[ '/contact']" routerLinkActive="active"><a>
+      <li [routerLink]="['/contact']" routerLinkActive="active" #contact="routerLinkActive">
+        <a>
           <span class="icon">
             <ion-icon name="navigate-outline"></ion-icon>
           </span>
@@ -38,5 +44,14 @@
       </li>
       <div class="indicator"></div>
     </ul>
+  </div>
+</div>
+<div class="title-container">
+  <div class="title">
+    <div *ngIf="about.isActive">About Me</div>
+    <div *ngIf="exp.isActive">Experience</div>
+    <div *ngIf="pro.isActive">Projects</div>
+    <div *ngIf="skill.isActive">Skills</div>
+    <div *ngIf="contact.isActive">Contact Me</div>
   </div>
 </div>
