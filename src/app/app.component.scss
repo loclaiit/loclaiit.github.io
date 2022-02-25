@@ -18,6 +18,12 @@
 .col-profile .card{
   border-radius: 10px 10px 0 0;
   border: none;
+  padding: 15px 0px;
+    width: 100%;
+    text-align: center;
+}
+.card .card-body{
+  padding:0;
 }
 .col-content{
   height: 100vh;

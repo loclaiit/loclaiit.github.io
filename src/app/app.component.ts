@@ -8,5 +8,5 @@ import { AfterViewInit, Component } from '@angular/core';
 export class AppComponent implements AfterViewInit {
   ngAfterViewInit(): void {
   }
-  title = 'MyToeic';
+  title = "Loc''s Portfolio";
 }

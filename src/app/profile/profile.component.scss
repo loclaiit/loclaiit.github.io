@@ -1,119 +1,74 @@
-@import './../../assets/styles/variable';
-@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@import "./../../assets/styles/variable";
 
-.profile-icon{
+.profile-icon {
   height: 30px;
   width: 30px;
-  color:black;
+  color: black;
   padding: 2px;
   text-align: center;
   border: 2px solid;
 }
-.profile-avatar{
+.profile-avatar {
   padding: 2px;
   text-align: center;
   border: 2px solid;
 }
-h4{
+.detail > li {
+  list-style: none;
+  background: #ccc;
+  font-size: 12px;
+  text-align: left;
+  // padding: 0px 5px 0px 5px;
+}
+ul.detail{
+  word-spacing: 3px;
+  letter-spacing: 1px;
+  border-radius: 10px;
+  background: #ccc;
+}
+h4 {
   color: $main-color;
 }
-.social-media{
-  margin:0px 0px 0px 0px;
+.social-media {
+  margin: 0px 0px 0px 0px;
   justify-content: center;
   align-items: center;
   display: flex;
   gap: 10px;
   position: absolute;
-    left: 0;
-    bottom: 10px;
+  left: 0;
+  bottom: 10px;
 }
-.small-logo{
+.small-logo {
   width: 30px;
   height: 30px;
   // border-radius: 50%;
   cursor: pointer;
   z-index: 1;
 }
-.small-logo:hover{
+.small-logo:hover {
   color: $main-color;
-  transform: scale(1.2,1.2);
+  transform: scale(1.2, 1.2);
   transition: 0.8s;
 }
-#audio-icon.playing{
+#audio-icon.playing {
   animation: playing 0.5s linear infinite;
   color: $main-color;
 }
-@keyframes playing{
-  0%{
-    transform: scale(1,1);
+@keyframes playing {
+  0% {
+    transform: scale(1, 1);
   }
-  100%{
-    transform: scale(1.2,1.2);
+  100% {
+    transform: scale(1.2, 1.2);
   }
 }
-.about-me>p>i{
-  margin-bottom:5px;
+.about-me > p > i {
+  margin-bottom: 5px;
   margin-right: 5px;
   width: 30px;
 }
-.container{
+.container {
   height: calc(100vh - 32px);
 }
 
-
-
-
-#container {
-  text-align: center;
-  color:#999;
-  // text-transform: uppercase;
-  font-size:36px;
-  font-weight:bold;
-  //padding-top:200px;
-  // position:absolute;
-  //bottom:45%;
-  display:block;
-  // opacity: 0.3;
-}
-
-#flip {
-  height:50px;
-  overflow:hidden;
-}
-
-// #flip::before{
-//   content: 'love ';
-// }
-
-#flip > div > div {
-  color:#fff;
-  // padding:4px 12px;
-  height:45px;
-  margin-bottom:45px;
-  display:inline-block;
-}
-
-#flip div:first-child {
-  animation: show 20s linear infinite;
-}
-
-#flip div div {
-  background:#ccc;
-}
-#flip div:first-child div {
-  background:#000;
-}
-#flip div:last-child div {
-  background:$main-color;
-}
-
-@keyframes show {
-  0% {margin-top:-270px;}
-  5% {margin-top:-180px;}
-  33% {margin-top:-180px;}
-  38% {margin-top:-90px;}
-  66% {margin-top:-90px;}
-  71% {margin-top:0px;}
-  99.99% {margin-top:0px;}
-  100% {margin-top:-270px;}
-}
