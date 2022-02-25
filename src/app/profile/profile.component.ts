@@ -42,8 +42,7 @@ export class ProfileComponent implements OnInit {
     const $ = document.querySelector.bind(document);
     var audio= document.getElementById("audio-icon");
     audio.addEventListener("click",function(){
-      const player = $("#audio-player") ;//document.getElementById("audio-player");
-      console.log(player);
+      const player = $("#audio-player") ;
       if(player != null){
         if(player.currentTime == 0 || player.ended)
         {

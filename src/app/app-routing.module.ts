@@ -7,12 +7,12 @@ import { ProjectComponent } from './project/project.component';
 import { SkillComponent } from './skill/skill.component';
 
 const routes: Routes = [
-  {path:"", redirectTo: 'portfolio/about', pathMatch: 'full' },
-  {path:"portfolio/about" , component:AboutComponent},
-  {path:"portfolio/contact" , component:ContactComponent},
-  {path:"portfolio/experience" , component:ExperienceComponent},
-  {path:"portfolio/project" , component:ProjectComponent},
-  {path:"portfolio/skill" , component:SkillComponent},
+  {path:"", redirectTo: 'about', pathMatch: 'full' },
+  {path:"about" , component:AboutComponent},
+  {path:"contact" , component:ContactComponent},
+  {path:"experience" , component:ExperienceComponent},
+  {path:"project" , component:ProjectComponent},
+  {path:"skill" , component:SkillComponent},
   {path:"**",component:AboutComponent,pathMatch:"full"},
 ];
 

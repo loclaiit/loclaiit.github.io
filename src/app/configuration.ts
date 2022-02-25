@@ -6,16 +6,15 @@ export const Configuration = {
   userLocation: 'Ho Chi Minh',
   userEmail: 'localiit@gmail.com',
   userDateOfBirth: '18/03/1991',
-  userAddress: 'Bahçelievler / Istanbul',
-  userPhone: '(555) 123 4567',
+  userAddress: 'Hochiminh - Vietnam',
+  userPhone: '(84) 909 000 779',
   aboutMe:
-    'Abdullah Öztürk. I am fullstack developer and blogger. I interested in .net technologies for backend and angular for frontend. You can read my articles on medium.',
+    'I am fullstack developer. I interested in .net technologies for backend and angular for frontend.',
 };
 
 //Personal Informations
 export const Skills = [
   'C#',
-  '.Net Core',
   'Angular',
   'Asp.Net',
   'Typescript',
@@ -24,34 +23,18 @@ export const Skills = [
 
 export const JobExperience = [
   {
-    company: 'IBM / Serii',
-    rank: 'Logistic Support Personal ',
+    company: 'Cadena',
+    rank: 'Software Delevoper',
     date: '07/2017 - 08/2016',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
-    company: 'Albayrak Bilgisayar',
-    rank: 'Technical Service Personal',
+    company: 'DXC',
+    rank: 'Software Delevoper',
     date: '07/2015 - 07/2015',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
 ];
-
-//Max job experiences limit is 3 . If you add more than 3 skill , you may be disappointed.
-
-export const Education = [
-  {
-    school: 'Sivas Cumhuriyet University',
-    date: '09/2018 - Present',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-  {
-    school: 'Türk Telekom Vocational High School',
-    date: '09/2013 - 07/2017',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-  },
-];
-
 //Max education limit is 3 . If you add more than 3 skill , you may be disappointed.
 
 export const Services = [
